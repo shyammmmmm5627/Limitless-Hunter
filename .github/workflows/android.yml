@@ -35,8 +35,8 @@ jobs:
         with:
           gradle-version: '8.9'
 
-      - name: Build debug APK
-        run: gradle assembleDebug
+      - name: Build debug APK with detailed logs
+        run: gradle assembleDebug --stacktrace --info
 
       - name: Upload APK
         if: success()
